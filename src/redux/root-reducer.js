@@ -1,4 +1,4 @@
-import { combineReducers } from "redux";
+import { combineReducers } from "@reduxjs/toolkit";
 import { persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 
@@ -9,7 +9,7 @@ import authReducer from "./auth/auth-slice";
 const persistConfig = {
     key: 'auth',
     storage,
-    whitelist: ['token'],
+    whitelist: ['token']
 }
 
 const persistedAuthReducer = persistReducer(persistConfig, authReducer)
@@ -20,4 +20,4 @@ const rootReducer = combineReducers({
     filter: filterReducer,
 })
 
-export default rootReducer;
+export default rootReducer;  

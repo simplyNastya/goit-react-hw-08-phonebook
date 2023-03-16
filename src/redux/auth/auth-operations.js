@@ -4,8 +4,8 @@ import * as api from '../API/auth';
 export const register = createAsyncThunk(
   'auth/register', async (data, { rejectWithValue }) => {
     try { 
-      const result = await api.register(data)
-      return result
+      const result = await api.register(data);
+      return result;
     }
     catch ({ response }) {
       return rejectWithValue(response.data)
@@ -16,8 +16,8 @@ export const register = createAsyncThunk(
 export const login = createAsyncThunk(
   'auth/login', async (data, { rejectWithValue }) => {
     try { 
-      const result = await api.login(data)
-      return result
+      const result = await api.login(data);
+      return result;
     }
     catch ({ response }) {
       return rejectWithValue(response.data)
@@ -33,6 +33,27 @@ export const logout = createAsyncThunk(
     }
     catch ({ response }) {
       return rejectWithValue(response.data);
+    }
+  }
+)
+
+export const current = createAsyncThunk(
+  'auth/current', async (_, { rejectWithValue, getState }) => {
+    try { 
+      const { auth } = getState();
+      const result = await api.getCurrent(auth.token);
+      return result;
+    }
+    catch ({ response }) {
+      return rejectWithValue(response.data);
+    }
+},
+  {
+    condition: (_, { getState }) => {
+      const { auth } = getState();
+      if (!auth.token) {
+        return false;
+      }
     }
   }
 )
