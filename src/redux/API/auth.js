@@ -25,9 +25,7 @@ export const login = async (data) => {
 }
 
 export const logout = async () => {
-  const { data: result } = await authInstance.post('/users/logout');
+  const { data } = await authInstance.post('/users/logout');
   setToken();
-  return result
+  return data
 }
-
-export default authInstance;
