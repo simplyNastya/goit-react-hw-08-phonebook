@@ -11,7 +11,7 @@ const LoginForm = ({ onSubmit }) => {
     onSubmit,
   });
 
-  const { name, email, password } = state;
+  const { email, password } = state;
 
   return (
     <form onSubmit={handleSubmit}>
