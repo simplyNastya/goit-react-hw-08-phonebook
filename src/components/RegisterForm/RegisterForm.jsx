@@ -3,7 +3,7 @@ import initialState from './initialState';
 import TextField from 'components/TextField/TextField';
 import fields from './fields';
 import Button from 'components/Button/Button';
-import styles from './registerForm.module.css';
+// import styles from './registerForm.module.css';
 
 const RegisterForm = ({ onSubmit }) => {
   const { state, handleChange, handleSubmit } = useForm({
