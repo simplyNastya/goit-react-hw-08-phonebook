@@ -13,7 +13,6 @@ const setToken = token => {
 
 export const register = async (data) => {
   const { data: result } = await instance.post('/users/signup', data);
-  console.log(data)
   setToken(result.token);
   return result;
 }

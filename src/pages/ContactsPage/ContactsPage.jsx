@@ -12,7 +12,6 @@ import { Blocks } from 'react-loader-spinner';
 import Form from 'components/Form/Form';
 import Contacts from 'components/Contacts/Contacts';
 import Filter from 'components/Filter/Filter';
-// import Navbar from 'components/Navbar/Navbar';
 
 import styles from './contactsPage.module.css';
 

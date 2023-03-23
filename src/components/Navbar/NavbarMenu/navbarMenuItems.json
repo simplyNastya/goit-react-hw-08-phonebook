@@ -1,0 +1,14 @@
+[
+    {
+        "id": "1",
+        "text": "Home page",
+        "link": "/",
+        "private": true
+    },
+    {
+        "id": "2",
+        "text": "Contacts page",
+        "link": "/contacts",
+        "private": true
+    }
+]

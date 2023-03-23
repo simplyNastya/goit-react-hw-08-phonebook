@@ -7,12 +7,12 @@ import {
 
 export const fetchContacts = createAsyncThunk(
   'contacts/fetchAll',
-  async (_, { rejectWithValue }) => {
+  async (_, thunkAPI) => {
     try {
       const { data } = await getAllContacts();
       return data;
     } catch ({ response }) {
-      return rejectWithValue(response);
+      return thunkAPI.rejectWithValue(response);
     }
   }
 );

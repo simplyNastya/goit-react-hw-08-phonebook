@@ -4,7 +4,6 @@ import { RotatingLines } from 'react-loader-spinner';
 
 import PublicRoute from 'components/PublicRoute/PublicRoute';
 import PrivateRoute from 'components/PrivateRoute/PrivateRoute';
-// import Navbar from 'components/Navbar/Navbar';
 
 const HomePage = lazy(() => import('pages/HomePage/HomePage'));
 const RegisterPage = lazy(() => import('pages/RegisterPage/RegisterPage'));
@@ -30,7 +29,7 @@ const UserRoutes = () => {
                 <Route element={<PrivateRoute />}>
                     <Route path='/contacts' element={<ContactsPage />} />
                 </Route>
-                <Route path="*" element={<h1>Not found</h1>} />
+                    <Route path="*" element={<h1>Not found</h1>} />
             </Routes>
         </Suspense>
     )

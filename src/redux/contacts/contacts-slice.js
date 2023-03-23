@@ -47,7 +47,7 @@ const contactsSlice = createSlice({
       })
       .addCase(fetchDeleteContact.fulfilled, (state, { payload }) => {
         state.isLoading = false;
-        state.contacts = state.contacts.filter(item => item.id !== payload);
+        state.contacts = state.contacts.filter(({_id}) => _id !== payload);
       })
       .addCase(fetchDeleteContact.rejected, (state, { payload }) => {
         state.isLoading = false;
