@@ -11,7 +11,7 @@ const LoginPage = () => {
 
   return (
     <>
-      <h1>Login Page</h1>
+      <h2>LoginPage</h2>
       <LoginForm onSubmit={onLogin} />
     </>
   );

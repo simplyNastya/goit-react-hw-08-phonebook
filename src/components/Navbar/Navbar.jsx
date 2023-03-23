@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+import { Outlet } from 'react-router-dom';
 
 import NavbarAuth from './NavbarAuth/NavbarAuth';
 import NavbarUser from './NavbarUser/NavbarUser';
@@ -17,6 +18,7 @@ const Navbar = () => {
           {isLogin && <NavbarUser />}
         </nav>
       </div>
+      <Outlet />
     </header>
   );
 };
