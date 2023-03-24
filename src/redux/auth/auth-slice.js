@@ -5,7 +5,7 @@ import { register, login, logout, current } from './auth-operations'
 const initialState = {
     user: {},
     token: '',
-    isLoging: false,
+    isLogin: false,
     loading: false,
     error: null,
 }
@@ -32,7 +32,8 @@ const authSlice = createSlice({
             state.loading = true;
             state.error = null;
         })
-        .addCase(login.fulfilled, (state, { payload }) => {
+            .addCase(login.fulfilled, (state, { payload }) => {
+            console.log(payload)
             state.loading = false;
             state.user = payload.user;
             state.token = payload.token;
@@ -49,8 +50,8 @@ const authSlice = createSlice({
             .addCase(current.fulfilled, (state, { payload }) => {
             console.log(payload)
             state.loading = false;
-            state.user = payload.user;
-            state.token = payload.token;
+            state.user = payload;
+            // state.token = payload.token;
             state.isLogin = true;
         })
         .addCase(current.rejected, (state, { payload }) => {

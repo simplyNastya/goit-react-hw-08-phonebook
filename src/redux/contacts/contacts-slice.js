@@ -34,6 +34,8 @@ const contactsSlice = createSlice({
         state.error = null;
       })
       .addCase(fetchAddContact.fulfilled, (state, { payload }) => {
+        
+        console.log(payload);
         state.isLoading = false;
         state.contacts.push(payload);
       })
@@ -47,7 +49,7 @@ const contactsSlice = createSlice({
       })
       .addCase(fetchDeleteContact.fulfilled, (state, { payload }) => {
         state.isLoading = false;
-        state.contacts = state.contacts.filter(({_id}) => _id !== payload);
+        state.contacts = state.contacts.filter(({id}) => id !== payload);
       })
       .addCase(fetchDeleteContact.rejected, (state, { payload }) => {
         state.isLoading = false;

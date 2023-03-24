@@ -11,7 +11,7 @@ const INITIAL_VALUE = {
 const Form = () => {
   const [value, setValue] = useState({ ...INITIAL_VALUE });
 
-  const focusRef = useRef();
+  const focusRef = useRef(false);
   const dispatch = useDispatch();
 
   useEffect(() => {
