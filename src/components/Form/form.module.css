@@ -30,13 +30,28 @@
 }
 
 .btn {
-    width: 120px;
+    /* width: 120px; */
+
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
+
     padding: 10px 15px;
+
+    font-size: 18px;
+    font-weight: 500;
+
+    color: #000;
     background-color: #fff;
     border: 1px solid rgb(188, 188, 188);
     border-radius: 5px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
     cursor: pointer;
 }
+
+ .btn:hover {
+     color: #fff;
+     background-color: rgba(59, 203, 216, 0.338);
+     border-color: rgb(59, 203, 216);
+ }
