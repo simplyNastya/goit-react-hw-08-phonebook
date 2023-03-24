@@ -5,14 +5,17 @@ const NavbarAuth = () => {
   return (
     <>
       <ul className={styles.list}>
-        <NavLink to="/register" className={styles.link}>
-          Register
-        </NavLink>
-        <NavLink to="/login" className={styles.link}>
-          Login
-        </NavLink>
+        <li className={styles.item}>
+          <NavLink to="/register" className={styles.link}>
+            Register
+          </NavLink>
+        </li>
+        <li className={styles.item}>
+          <NavLink to="/login" className={styles.link}>
+            Login
+          </NavLink>
+        </li>
       </ul>
-      {/* <Outlet /> */}
     </>
   );
 };

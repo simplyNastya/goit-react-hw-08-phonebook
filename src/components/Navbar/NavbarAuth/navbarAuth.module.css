@@ -2,6 +2,8 @@
     display: flex;
     justify-content: flex-end;
     gap: 10px;
+
+    list-style: none;
 }
 
 .link{
@@ -10,9 +12,17 @@
     font-size: 18px;
     font-weight: 500;
     color: #000;
-
-    border: 1px solid #000;
+    background-color: #fff;
     border-radius: 5px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.link:hover {
+    color: #fff;
+    background-color: rgba(59, 203, 216, 0.338);
+    border-color: rgb(59,
+    203,
+    216);
 }
 
 .link:global(.active) {
