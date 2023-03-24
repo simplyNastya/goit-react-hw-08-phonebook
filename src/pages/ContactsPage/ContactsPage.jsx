@@ -33,7 +33,7 @@ const ContactsPage = () => {
       ) : (
         <div className={styles.section}>
           <div className={styles.wrapper}>
-            <h1 style={{ padding: 20 }}>Phonebook</h1>
+            <h1 style={{ padding: 20 }}>PhoneBook</h1>
             <Form />
 
             <div className={styles.spiner_box}>
