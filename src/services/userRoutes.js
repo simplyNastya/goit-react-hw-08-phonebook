@@ -13,7 +13,7 @@ const ContactsPage = lazy(() => import('pages/ContactsPage/ContactsPage'));
 const UserRoutes = () => {
     return (
         <Suspense fallback={<RotatingLines
-            strokeColor="grey"
+            strokeColor="rgb(59, 203, 216)"
             strokeWidth="5"
             animationDuration="0.75"
             width="96"
