@@ -1,12 +1,21 @@
-.list {}
+.list {
+    padding-left: 0;
+}
 
 .item {
     display: flex;
     gap: 5px;
+    justify-content: space-between;
     align-items: center;
 }
 
-.itemName {}
+.itemName {
+    font-weight: 600;
+}
+
+.itemNumber {
+    font-weight: 400;
+}
 
 .btn {
     padding: 5px 10px;
@@ -24,6 +33,6 @@
     
 .btn:hover {
     color: #fff;
-    background-color: rgba(59, 203, 216, 0.338);
-    border-color: rgb(59, 203, 216);
+    background-color: rgba(137, 43, 226, 0.2);
+    border-color: rgb(137, 43, 226);
 }

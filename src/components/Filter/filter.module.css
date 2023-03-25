@@ -12,9 +12,15 @@
     width: 200px;
     padding: 5px;
     margin-bottom: 20px;
+
+    background-color: #fff;
+    outline-color: rgba(205, 43, 226, 0.6);
+
+    border-radius: 5px;
 }
 
-.list{
+.title{
+    font-weight: 600;
 }
 
 .item{

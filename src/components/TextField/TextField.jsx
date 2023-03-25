@@ -1,10 +1,10 @@
-// import styles from './textField.module.css';
+import styles from './textField.module.css';
 
 const TextField = ({ label, ...props }) => {
   return (
     <div>
-      <label>{label}</label>
-      <input {...props} />
+      <label className={styles.label}>{label}</label>
+      <input className={styles.input} {...props} />
     </div>
   );
 };

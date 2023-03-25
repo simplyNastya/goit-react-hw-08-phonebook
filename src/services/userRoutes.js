@@ -6,6 +6,7 @@ import PublicRoute from 'components/PublicRoute/PublicRoute';
 import PrivateRoute from 'components/PrivateRoute/PrivateRoute';
 
 const HomePage = lazy(() => import('pages/HomePage/HomePage'));
+const AuthLayout = lazy(() => import('pages/AuthLayout/AuthLayout'));
 const RegisterPage = lazy(() => import('pages/RegisterPage/RegisterPage'));
 const LoginPage = lazy(() => import('pages/LoginPage/LoginPage'));
 const ContactsPage = lazy(() => import('pages/ContactsPage/ContactsPage'));
@@ -20,7 +21,8 @@ const UserRoutes = () => {
             visible={true}
         />}>
             <Routes>
-                <Route path='/' element={<HomePage />}>
+                <Route path='/' element={<HomePage />} />
+                <Route element={<AuthLayout />}>
                     <Route element={<PublicRoute/>}>
                         <Route path='/register' element={<RegisterPage />} />
                         <Route path='/login' element={<LoginPage />} />

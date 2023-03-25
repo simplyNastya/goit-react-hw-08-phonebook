@@ -33,7 +33,8 @@ const Contacts = () => {
           return (
             <li className={styles.item} key={contact.id}>
               <p className={styles.itemName}>
-                {contact.name}: <span>{contact.number}</span>
+                {contact.name}:{' '}
+                <span className={styles.itemNumber}>{contact.number}</span>
               </p>
               <button
                 onClick={() => onDeleteContact(contact.id)}

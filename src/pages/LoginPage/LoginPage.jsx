@@ -11,7 +11,9 @@ const LoginPage = () => {
 
   return (
     <>
-      <h2>LoginPage</h2>
+      <h1>
+        Nice to see you again, just log in and we will continue our trip :)
+      </h1>
       <LoginForm onSubmit={onLogin} />
     </>
   );

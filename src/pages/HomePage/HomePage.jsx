@@ -1,4 +1,3 @@
-import Navbar from 'components/Navbar/Navbar';
 import { Outlet } from 'react-router-dom';
 
 import styles from './homePage.module.css';
@@ -11,8 +10,8 @@ const HomePage = () => {
           <h1 className={styles.title}>
             The best app to collect your contacts
           </h1>
-          <Outlet />
         </div>
+        <Outlet />
       </section>
     </main>
   );

@@ -4,7 +4,7 @@ import initialState from './initialState';
 import TextField from 'components/TextField/TextField';
 import Button from 'components/Button/Button';
 import fields from './fields';
-// import styles from './loginForm.module.css';
+import styles from './loginForm.module.css';
 
 const LoginForm = ({ onSubmit }) => {
   const { state, handleChange, handleSubmit } = useForm({
@@ -15,14 +15,14 @@ const LoginForm = ({ onSubmit }) => {
   const { email, password } = state;
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className={styles.form} onSubmit={handleSubmit}>
       <TextField value={email} onChange={handleChange} {...fields.email} />
       <TextField
         value={password}
         onChange={handleChange}
         {...fields.password}
       />
-      <Button>Login</Button>
+      <Button className={styles.btn}>Login</Button>
     </form>
   );
 };
