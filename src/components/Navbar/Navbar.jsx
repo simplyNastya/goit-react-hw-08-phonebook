@@ -1,5 +1,4 @@
 import { useSelector } from 'react-redux';
-// import { Outlet } from 'react-router-dom';
 import { RiContactsBookLine } from 'react-icons/ri';
 
 import NavbarAuth from './NavbarAuth/NavbarAuth';
@@ -16,13 +15,20 @@ const Navbar = () => {
     <>
       <header className={styles.headerSection}>
         <div className={styles.headerSectionContainer}>
-          <NavLink to="/" className={styles.link}>
-            <RiContactsBookLine className={styles.logo} />
-            <p className={styles.logoText}>PhoneBook</p>
-          </NavLink>
           <nav className={styles.nav}>
+            <NavLink to="/" className={styles.link}>
+              <RiContactsBookLine className={styles.logo} />
+              <p className={styles.logoText}>PhoneBook</p>
+            </NavLink>
             {!isLogin && <NavbarAuth />}
-            {isLogin && <NavbarUser />}
+            {isLogin && (
+              <>
+                <NavLink to="/contacts" className={styles.link}>
+                  Contacts
+                </NavLink>{' '}
+                <NavbarUser />
+              </>
+            )}
           </nav>
         </div>
       </header>
