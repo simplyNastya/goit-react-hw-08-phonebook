@@ -1,9 +1,9 @@
 import { lazy, Suspense } from 'react';
-import { Route, Routes } from 'react-router-dom'
-import { RotatingLines } from 'react-loader-spinner';
+import { Route, Routes } from 'react-router-dom';
 
 import PublicRoute from 'components/PublicRoute/PublicRoute';
 import PrivateRoute from 'components/PrivateRoute/PrivateRoute';
+import Loader from 'components/Loader/Loader';
 
 const HomePage = lazy(() => import('pages/HomePage/HomePage'));
 const AuthLayout = lazy(() => import('pages/AuthLayout/AuthLayout'));
@@ -13,13 +13,7 @@ const ContactsPage = lazy(() => import('pages/ContactsPage/ContactsPage'));
 
 const UserRoutes = () => {
     return (
-        <Suspense fallback={<RotatingLines
-            strokeColor="rgb(59, 203, 216)"
-            strokeWidth="5"
-            animationDuration="0.75"
-            width="96"
-            visible={true}
-        />}>
+        <Suspense fallback={<Loader />}>
             <Routes>
                 <Route path='/' element={<HomePage />} />
                 <Route element={<AuthLayout />}>
